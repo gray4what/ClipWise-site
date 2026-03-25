@@ -31,10 +31,10 @@
 </head>
 <body>
     <h1>ClipWise — Privacy Policy</h1>
-    <p class="subtitle">Last updated: March 22, 2026</p>
+    <p class="subtitle">Last updated: March 24, 2026</p>
 
     <div class="highlight">
-        <strong>Summary:</strong> ClipWise does not collect, transmit, or share any user data. All data is stored locally in your browser. The extension makes zero network requests.
+        <strong>Summary:</strong> ClipWise stores all data locally in your browser by default. If you opt in to Google Drive Sync, your clips are stored in your own Google Drive (app-private folder). ClipWise does not collect, transmit, or share any data with the extension developer or third parties.
     </div>
 
     <h2>Data Collection</h2>
@@ -45,31 +45,45 @@
         <li>No analytics or telemetry data is collected</li>
         <li>No cookies are used</li>
         <li>No third-party tracking scripts are included</li>
+        <li>No data is sent to the extension developer or any third-party server</li>
     </ul>
 
     <h2>Data Storage</h2>
-    <p>All data you create with ClipWise (clips, projects, tags, ratings, and notes) is stored exclusively in your browser's local IndexedDB database. This data:</p>
+    <p>All data you create with ClipWise (clips, projects, tags, ratings, and notes) is stored in your browser's local IndexedDB database. This data:</p>
     <ul>
-        <li>Never leaves your device</li>
-        <li>Is not synced to any server</li>
+        <li>Is stored locally on your device by default</li>
         <li>Is not accessible to the extension developer or any third party</li>
-        <li>Can be exported by you at any time as a JSON backup file</li>
+        <li>Can be exported by you at any time as a JSON or Markdown backup file</li>
         <li>Can be deleted by you at any time by uninstalling the extension or clearing browser data</li>
     </ul>
 
+    <h2>Google Drive Sync (Optional)</h2>
+    <p>ClipWise offers an <strong>optional</strong> sync feature that stores your data in your own Google Drive account. When you enable sync:</p>
+    <ul>
+        <li>Your clips and projects are stored in a <strong>private app-data folder</strong> (<code>appDataFolder</code>) in your Google Drive</li>
+        <li>This folder is <strong>invisible</strong> in your Google Drive UI and can only be accessed by ClipWise</li>
+        <li>ClipWise uses the <code>drive.appdata</code> scope, which <strong>cannot</strong> access your other Google Drive files, folders, or documents</li>
+        <li>Data is synced directly between your browser and your Google Drive &mdash; no third-party server is involved</li>
+        <li>You can disable sync at any time, and your local data remains intact</li>
+        <li>You can revoke access at any time in your <a href="https://myaccount.google.com/permissions">Google Account settings</a></li>
+    </ul>
+    <p>Sync is <strong>off by default</strong>. You must explicitly enable it and authorize with your Google account.</p>
+
     <h2>Network Requests</h2>
-    <p>ClipWise makes <strong>zero network requests</strong>. The extension operates entirely offline after installation. No data is ever transmitted from your browser to any external server.</p>
+    <p>By default, ClipWise makes <strong>zero network requests</strong> and operates entirely offline after installation.</p>
+    <p>If you enable Google Drive Sync, ClipWise connects <strong>only</strong> to the Google Drive API (<code>googleapis.com</code>) to read and write your sync data. No other network requests are made. No data is sent to the extension developer or any analytics service.</p>
 
     <h2>Permissions</h2>
     <p>The extension requests only the minimum permissions required to function:</p>
     <ul>
         <li><strong>Side Panel</strong> — to display the notebook interface</li>
         <li><strong>Content Scripts</strong> — to inject clip buttons on ChatGPT, Claude, and Gemini pages and read conversation content when you click a clip button</li>
-        <li><strong>Storage</strong> — to persist your data locally in IndexedDB</li>
+        <li><strong>Storage</strong> — to persist your data and preferences locally</li>
+        <li><strong>Identity</strong> — to authenticate with your Google account for optional Google Drive sync (only used when you enable sync)</li>
     </ul>
 
     <h2>Changes to This Policy</h2>
-    <p>If this privacy policy is updated, the changes will be posted on this page with an updated revision date. The core commitment — no data collection, no network requests, local-only storage — will not change.</p>
+    <p>If this privacy policy is updated, the changes will be posted on this page with an updated revision date. The core commitment — no data collection, user-controlled sync, no third-party data sharing — will not change.</p>
 
     <h2>Contact</h2>
     <p>If you have questions about this privacy policy, please contact us at clipwise.ext@gmail.com.</p>
